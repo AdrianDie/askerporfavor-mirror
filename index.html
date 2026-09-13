@@ -775,9 +775,67 @@ section.up-sells.upsells.products h2{
 .add-blur-bg-to-section .elementor-widget-wrap {
 
 	 background-color: #000000;
-	
+
 }
-	
+
+}
+
+
+/* Knapperad flyttet ut av hero (var proppet inn i heroen, gjorde den rotete) */
+.hero-quicklinks-section{
+	background:#17140f;
+	padding:26px 20px;
+}
+.hero-quicklinks{
+	max-width:1140px;
+	margin:0 auto;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+	gap:14px;
+}
+.hero-quicklinks a.btn.btn-primary{
+	margin:0;
+}
+@media only screen and (max-width: 600px) {
+	.hero-quicklinks{
+		flex-direction:column;
+	}
+}
+
+/* Vinkart-seksjon: erstatter det gamle fotobakgrunn-kortet (lav kontrast,
+   så ut som en del av hero) med et flatt, lesbart mørkt kort i temaets
+   egne farger. Samme innhold, bare ny presentasjon. */
+.elementor-element-5f1c47a{
+	margin-top:20px!important;
+}
+.elementor-element-5f1c47a [data-id="3c58ee7"] > .elementor-widget-wrap,
+.elementor-element-5f1c47a [data-id="1aa37d7"] > .elementor-widget-wrap,
+.elementor-element-5f1c47a [data-id="fe4f9d8"] > .elementor-widget-wrap{
+	background-image:none!important;
+	background-color:#17140f!important;
+}
+.elementor-element-5f1c47a [data-id="3c58ee7"] > .elementor-widget-wrap > .elementor-background-overlay,
+.elementor-element-5f1c47a [data-id="1aa37d7"] > .elementor-widget-wrap > .elementor-background-overlay,
+.elementor-element-5f1c47a [data-id="fe4f9d8"] > .elementor-widget-wrap > .elementor-background-overlay{
+	display:none!important;
+}
+.elementor-element-5f1c47a [data-id="3c58ee7"] > .elementor-element-populated,
+.elementor-element-5f1c47a [data-id="1aa37d7"] > .elementor-element-populated,
+.elementor-element-5f1c47a [data-id="fe4f9d8"] > .elementor-element-populated{
+	border-color:rgba(255,255,255,.14)!important;
+	padding:34px 30px!important;
+}
+.elementor-element-5f1c47a h2.elementor-heading-title{
+	color:#bc906b!important;
+}
+.elementor-element-5f1c47a [data-id="3c58ee7"] h2.elementor-heading-title{
+	font-size:26px!important;
+	letter-spacing:.03em;
+}
+.elementor-element-5f1c47a .elementor-widget-text-editor p{
+	color:#f4efe4!important;
+	line-height:1.9;
 }
 
 
@@ -1435,14 +1493,6 @@ a.navbar-brand img {
                                                                                     <span class="info-before-bar"></span>
                                                                                   Stedet for den beste spanske maten                                                                                       <span class="info-after-bar"></span>
                                                                              </p>
-                                                                                                <div class="slider-btn-area">
-                                    <a href="https://porfavor.superbexperience.com/reserve/experience" class="btn btn-primary">RESERVASJON</a>
-                                    <a href="https://online.fliphtml5.com/vlvle/Porfavor-menu-english/" class="btn btn-primary">RESTAURANT MENY</a>
-                                    <a href="take-away/index.html" class="btn btn-primary">Take away</a>
-                                    <a href="catering/index.html" class="btn btn-primary">Catering</a>
-                                    <a href="wp-content/uploads/2026/07/WINE-MENU-PORFAVOR.pdf" class="btn btn-primary">Vinkart</a>
-                                    <a href="privat-selskap/index.html" class="btn btn-primary">Privat selskap</a>
-                                </div>
                                                             </div>
                         </div><!-- col end-->
                      </div><!-- row end-->
@@ -1462,6 +1512,16 @@ a.navbar-brand img {
 		</div>
 					</div>
 		</section>
+				<section class="hero-quicklinks-section">
+					<div class="hero-quicklinks">
+						<a href="https://porfavor.superbexperience.com/reserve/experience" class="btn btn-primary">RESERVASJON</a>
+						<a href="https://online.fliphtml5.com/vlvle/Porfavor-menu-english/" class="btn btn-primary">RESTAURANT MENY</a>
+						<a href="take-away/index.html" class="btn btn-primary">Take away</a>
+						<a href="catering/index.html" class="btn btn-primary">Catering</a>
+						<a href="wp-content/uploads/2026/07/WINE-MENU-PORFAVOR.pdf" class="btn btn-primary">Vinkart</a>
+						<a href="privat-selskap/index.html" class="btn btn-primary">Privat selskap</a>
+					</div>
+				</section>
 				<section class="elementor-section elementor-top-section elementor-element elementor-element-5f1c47a intro-box-content elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5f1c47a" data-element_type="section" data-settings="{&quot;animation&quot;:&quot;none&quot;,&quot;animation_mobile&quot;:&quot;none&quot;}">
 						<div class="elementor-container elementor-column-gap-default">
 					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-f6eb6bf elementor-invisible" data-id="f6eb6bf" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInUp&quot;,&quot;animation_delay&quot;:300}">
