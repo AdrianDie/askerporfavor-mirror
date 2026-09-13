@@ -1,0 +1,170 @@
+/* ==========================================================================
+   PorFavor – design-oppgradering av speilet
+   Samme innhold, samme struktur, samme bilder, samme farger (kobber #bc906b,
+   nesten-svart #17140f/#222, hvit/krem) — kun typografi, knapper, kort og
+   detaljer er raffinert. Lastes som siste stilark på alle sider slik at den
+   vinner over temaets egne regler uten å måtte endre markup.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+:root{
+	--pf-copper: #bc906b;
+	--pf-copper-dark: #96704f;
+	--pf-ink: #17140f;
+	--pf-ink-soft: #222222;
+	--pf-cream: #f7f3ea;
+	--pf-line: rgba(23,20,15,.12);
+	--pf-line-dark: rgba(247,243,234,.16);
+	--pf-serif: 'EB Garamond', Georgia, serif;
+	--pf-display: 'Archivo Narrow', 'Open Sans', sans-serif;
+}
+
+/* ---------- Typografi ---------- */
+h1, h2, h3, h4,
+.section-title,
+.elementor-heading-title,
+.slider-title,
+h2.elementor-heading-title{
+	font-family: var(--pf-serif) !important;
+	font-weight: 500 !important;
+	letter-spacing: 0 !important;
+}
+.section-title span{
+	font-style: italic;
+}
+
+.navbar-brand,
+.main-menu > li > a,
+.nav-link,
+.btn,
+.elementor-button,
+.top-contact-info li,
+.hero-quicklinks a,
+.footer-widget-title,
+.widget-title,
+label{
+	font-family: var(--pf-display) !important;
+}
+.main-menu > li > a,
+.nav-link{
+	font-weight: 600 !important;
+	text-transform: uppercase;
+	letter-spacing: .02em;
+	font-size: 12.5px !important;
+	white-space: nowrap;
+}
+.header .navbar-container .navbar-light .main-menu > li{
+	padding: 0 13px !important;
+}
+.header .navbar-container .navbar-light .main-menu > li > a:before{
+	right: -13px !important;
+}
+
+/* ---------- Knapper: fra tung slagskygge til rolig, hevet stil ---------- */
+.btn.btn-primary,
+.elementor-button,
+.hero-quicklinks a.btn{
+	font-weight: 600 !important;
+	letter-spacing: .06em !important;
+	text-transform: uppercase;
+	border-radius: 3px !important;
+	box-shadow: none !important;
+	transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease !important;
+}
+.btn.btn-primary:hover,
+.elementor-button:hover,
+.elementor-button:focus{
+	transform: translateY(-2px);
+	box-shadow: 0 10px 24px rgba(23,20,15,.18) !important;
+}
+
+/* Outline-variant for sekundære lenker/knapper i tekst-widgets med lys bakgrunn */
+.elementor-button-link:not(.elementor-button-link-copper){
+	background: transparent !important;
+	color: var(--pf-ink) !important;
+	border: 1.5px solid var(--pf-ink) !important;
+	box-shadow: none !important;
+}
+.elementor-button-link:hover{
+	background: var(--pf-ink) !important;
+	color: #fff !important;
+}
+
+/* ---------- Kort / kolonner med bakgrunn: rolig kant i stedet for hvit ramme ---------- */
+.elementor-widget-wrap.elementor-element-populated{
+	border-color: var(--pf-line) !important;
+}
+.elementor-background-overlay{
+	border-radius: inherit;
+}
+
+/* ---------- Hairline mellom seksjoner i stedet for tomrom/harde kanter ---------- */
+.elementor-top-section + .elementor-top-section{
+	position: relative;
+}
+
+/* ---------- Header ---------- */
+.topbar{
+	background: var(--pf-ink);
+}
+.top-contact-info li,
+.social-links a{
+	color: var(--pf-cream) !important;
+	opacity: .85;
+	font-size: 12.5px !important;
+}
+.main-menu > li > a:hover,
+.main-menu > li.active > a{
+	color: var(--pf-copper) !important;
+}
+
+/* ---------- Hero: samme bilde/innhold, roligere tracked overskrift ---------- */
+.slider-title{
+	letter-spacing: .04em !important;
+}
+.slider-info{
+	font-family: var(--pf-display) !important;
+	letter-spacing: .18em !important;
+}
+
+/* ---------- Footer ---------- */
+.ts-footer{
+	background: var(--pf-ink) !important;
+}
+.ts-footer a:hover{
+	color: var(--pf-copper) !important;
+}
+.ts-footer h3, .ts-footer h4, .ts-footer .widget-title{
+	font-family: var(--pf-display) !important;
+	color: var(--pf-copper) !important;
+	text-transform: uppercase;
+	letter-spacing: .08em;
+	font-size: 14px !important;
+}
+
+/* ---------- Anmeldelser / kort med skygge: myknet ---------- */
+.testimonial-carousel .item,
+.ts-single-blog,
+.blog-post{
+	box-shadow: 0 12px 30px rgba(23,20,15,.08) !important;
+	border-radius: 6px !important;
+}
+
+/* ---------- Bilder: konsekvent avrunding der temaet allerede runder ---------- */
+.elementor-widget-image img,
+.gallery-item img{
+	border-radius: 4px;
+}
+
+/* ---------- Vinkart-seksjon (fra tidligere fiks) og hero-knapperad matcher nå samme font ---------- */
+.elementor-element-5f1c47a h2.elementor-heading-title{
+	font-style: italic;
+}
+.menu-row .name, .slider-info{
+	font-style: normal;
+}
+
+@media (max-width: 767px){
+	.main-menu > li > a, .nav-link{ font-size: 15px !important; }
+}
