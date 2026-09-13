@@ -50,15 +50,34 @@ label{
 .nav-link{
 	font-weight: 600 !important;
 	text-transform: uppercase;
-	letter-spacing: .02em;
+	letter-spacing: .04em;
 	font-size: 12.5px !important;
 	white-space: nowrap;
+	position: relative;
 }
 .header .navbar-container .navbar-light .main-menu > li{
-	padding: 0 13px !important;
+	padding: 0 15px !important;
 }
+/* Fjern de små runde skille-prikkene mellom menypunktene – erstatt med en
+   rolig understreknings-indikator på hover/aktiv i stedet. */
 .header .navbar-container .navbar-light .main-menu > li > a:before{
-	right: -13px !important;
+	display: none !important;
+}
+.main-menu > li > a:after{
+	content: "";
+	position: absolute;
+	left: 0; right: 0; bottom: 28px;
+	height: 1px;
+	background: var(--pf-copper);
+	transform: scaleX(0);
+	transition: transform .25s ease;
+}
+.main-menu > li > a:hover:after,
+.main-menu > li.active > a:after{
+	transform: scaleX(1);
+}
+.navbar-container{
+	padding: 6px 0;
 }
 
 /* ---------- Knapper: fra tung slagskygge til rolig, hevet stil ---------- */
@@ -144,11 +163,88 @@ label{
 }
 
 /* ---------- Anmeldelser / kort med skygge: myknet ---------- */
-.testimonial-carousel .item,
 .ts-single-blog,
 .blog-post{
 	box-shadow: 0 12px 30px rgba(23,20,15,.08) !important;
 	border-radius: 6px !important;
+}
+
+/* ---------- Sitat-seksjonen (Henrik/Anna/Benedicte): fra kladdete
+   strektegnings-bakgrunn til et rolig, redaksjonelt sitat-kort ---------- */
+.elementor-element-6bc93f5{
+	background-image: none !important;
+	background-color: var(--pf-cream) !important;
+	padding: 90px 0 !important;
+}
+.elementor-element-6bc93f5 .elementor-background-overlay{
+	display: none !important;
+}
+.ts-testimonial-classic .testimonial-author-content{
+	max-width: 760px;
+	margin: 0 auto;
+}
+.ts-testimonial-classic .testimonial-author-content p.testimonial-text{
+	font-family: var(--pf-serif) !important;
+	font-style: italic;
+	color: var(--pf-ink-soft) !important;
+	font-size: 24px !important;
+	line-height: 1.6 !important;
+}
+.ts-testimonial-classic .testimonial-author-content p.testimonial-text i{
+	font-size: 28px !important;
+	display: inline-block !important;
+	margin: 0 0 14px !important;
+	color: var(--pf-copper) !important;
+}
+.testimonial-author-content img.testimonial-img{
+	width: 64px !important;
+	height: 64px !important;
+	border: 2px solid var(--pf-copper);
+	padding: 2px;
+	object-fit: cover;
+}
+.ts-testimonial-classic .testimonial-author-content .testimonial-footer span.author-name{
+	font-family: var(--pf-display) !important;
+	text-transform: uppercase;
+	letter-spacing: .06em;
+	font-size: 13px !important;
+	font-weight: 700 !important;
+}
+.ts-testimonial-classic .testimonial-author-content .testimonial-footer span.author-designation{
+	font-size: 13px !important;
+	opacity: .7;
+}
+.ts-testimonial-classic .testimonial-carousel.owl-carousel .owl-dot{
+	background: var(--pf-line) !important;
+	width: 8px !important;
+	height: 8px !important;
+}
+.ts-testimonial-classic .testimonial-carousel.owl-carousel .owl-dot.active{
+	background: var(--pf-copper) !important;
+}
+
+/* ---------- Hero → knapperad → vinkart: én sammenhengende mørk flyt i
+   stedet for separate svarte bokser med hvite mellomrom ---------- */
+.hero-quicklinks-section{
+	padding: 34px 20px 0 !important;
+}
+.hero-quicklinks a.btn.btn-primary{
+	background: transparent !important;
+	border: 1.5px solid var(--pf-copper) !important;
+	color: var(--pf-copper) !important;
+	padding: 14px 22px !important;
+}
+.hero-quicklinks a.btn.btn-primary:hover{
+	background: var(--pf-copper) !important;
+	color: var(--pf-ink) !important;
+}
+.elementor-element-5f1c47a{
+	margin-top: 0 !important;
+	background: var(--pf-ink);
+	padding-top: 34px;
+}
+.elementor-element-5f1c47a [data-id="3c58ee7"] > .elementor-widget-wrap{
+	box-shadow: none !important;
 }
 
 /* ---------- Bilder: konsekvent avrunding der temaet allerede runder ---------- */
